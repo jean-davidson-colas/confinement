@@ -4,7 +4,7 @@
 	$serverName = "localhost";
     $userName = "root";
     $passwordServer = "";
-    $nameTable = "blog";
+    $nameTable = "confinement";
 
     $connexion = mysqli_connect("$serverName", "$userName", "$passwordServer", "$nameTable") ;
 

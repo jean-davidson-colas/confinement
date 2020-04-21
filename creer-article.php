@@ -3,7 +3,7 @@
     session_start();
     date_default_timezone_set('Europe/Paris');
    
-    $connexion = mysqli_connect("localhost", "root", "", "blog");
+    $connexion = mysqli_connect("localhost", "root", "", "confinement");
 
     $requeteCptCat = "SELECT nom FROM categories";
     $queryCptCat = mysqli_query($connexion, $requeteCptCat);

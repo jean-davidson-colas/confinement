@@ -10,7 +10,7 @@ class bdd
 
     public function connect()
     {
-        $connect = mysqli_connect('localhost', 'root', '','blog');
+        $connect = mysqli_connect('localhost', 'root', '','confinement');
         //var_dump($connect);
         if($connect == false)
         {
@@ -55,7 +55,7 @@ class bdd
         }
         else
         {
-            $connect = mysqli_connect("localhost", "root", "", "blog");
+            $connect = mysqli_connect("localhost", "root", "", "confinement");
             $delete="DELETE FROM articles WHERE articles.id_utilisateur = '".$_POST['resat']."'";
             $query=mysqli_query($connect,$delete);
             
@@ -78,7 +78,7 @@ class bdd
         }
         else
         {
-            $connect = mysqli_connect("localhost", "root", "", "blog");
+            $connect = mysqli_connect("localhost", "root", "", "confinement");
             $delete="DELETE FROM articles WHERE articles.id_utilisateur = '".$_POST['art']."'";
             $query=mysqli_query($connect,$delete);
             
@@ -100,7 +100,7 @@ class bdd
         }
         else
         {
-            $connect = mysqli_connect("localhost", "root", "", "blog");
+            $connect = mysqli_connect("localhost", "root", "", "confinement");
             $delete="DELETE FROM commentaires WHERE commentaires.id_utilisateur = '".$_POST['com']."' ";
             $query=mysqli_query($connect,$delete);
             
@@ -112,7 +112,7 @@ class bdd
 
     public function update($id)
     {
-        $connect = mysqli_connect("localhost", "root", "", "blog");
+        $connect = mysqli_connect("localhost", "root", "", "confinement");
         $update="UPDATE prix SET prix = ".$_POST[$id]." WHERE id = $id";
         $query_update=mysqli_query($connect,$update);
         echo "les informations ont bien été modifier.";

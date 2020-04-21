@@ -6,7 +6,7 @@
 
 	session_start();
 
-	$connexion = mysqli_connect("localhost", "root", "", "blog");
+	$connexion = mysqli_connect("localhost", "root", "", "confinement");
 
 	
 
