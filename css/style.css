@@ -21,8 +21,8 @@ html
 }
 
 body
-{   background-image: url(../img/test.png);
-    font-family: "Ma_Super_Fonte";
+{   background: rgb(7,3,2);
+    background: linear-gradient(56deg, rgb(41, 44, 185) 0%, rgba(28, 41, 156, 0.972) 99%);
     color: rgb(228, 88, 23);
     /*color: rgb(6, 6, 56);*/
     margin:0;
