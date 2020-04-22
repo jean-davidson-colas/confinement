@@ -11,15 +11,15 @@ session_start();
 
 <head>
         <title>Accueil</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/style.css">
-        
+
 </head>
 
 
 
 <body>
-	
+
 	<div class="banniere">
 		<div class="logo">
 			<img src="img/logo.png">
@@ -30,9 +30,10 @@ session_start();
 
 <main>
 	<h1>Bienvenue  sur Konoha.Blog </h1>
+  <?php var_dump($_SESSION); ?>
 	<h2>Retrouver chaque jour des épisodes de Naruto a voir gratuitement!!!</h2>
 	<section>
-	<iframe width=100% height="615" src="https://www.youtube.com/embed/FOfWwN8lp9s" 
+	<iframe width=100% height="615" src="https://www.youtube.com/embed/FOfWwN8lp9s"
 		frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </section><hr>
 <section class="acc">
@@ -76,7 +77,7 @@ allowfullscreen></iframe>
 		</li>
 		<p>toujours plus de shippuden</p>
 	</ul>
-	
+
 </section>
 </main>
 
