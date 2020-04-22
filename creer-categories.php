@@ -4,13 +4,13 @@
 	$serverName = "localhost";
     $userName = "root";
     $passwordServer = "";
-    $nameTable = "blog";
+    $nameTable = "confinement";
 
     $connexion = mysqli_connect("$serverName", "$userName", "$passwordServer", "$nameTable") ;
 
-    
 
-    if (isset($_POST['addCat'])) 
+
+    if (isset($_POST['addCat']))
     {
     	$newCat = $_POST['newcategorie'];
     	$requeteNewCategorie = "INSERT INTO categories (nom) VALUES ('".$newCat."') ";
@@ -38,13 +38,13 @@
 
 	<main>
 		<?php
-			if ($_SESSION['id_droits'] == 1337 OR $_SESSION['id_droits'] == 42) 
+			if ($_SESSION['id_droits'] == 1337 OR $_SESSION['id_droits'] == 42)
 			{
-				
-			
-		
+
+
+
 		?>
-				
+
 				<section id="newCategorie">
 
 					<form action="creer-categories.php" method="post" id="formCategorie">
@@ -53,7 +53,7 @@
 						<br/>
 						<input type="submit" name="addCat" value="Ajouter">
 					</form>
-					
+
 				</section>
 		<?php
 			}
