@@ -1,6 +1,6 @@
 <html>
 
-<?php 
+<?php
 require 'class/bdd.php';
 require 'class/user.php';
 
@@ -22,10 +22,9 @@ session_start();
 
 <head>
 <meta charset="utf-8" />
-        <title>Connexion</title> 
+        <title>Connexion</title>
         <link rel="stylesheet" href="css/style.css">
-        <link href="https://fonts.googleapis.com/css?family=Leckerli+One&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
 
 </head>
 
@@ -42,9 +41,9 @@ session_start();
 
 <section class="connexion">
                  <h1> Connexion </h1>
-   
+
         <form class="formulaire" action="connexion.php" method="post">
-        
+
             <label>Identifiant</label>
             <input type="text" name="login" required><br>
             <label>Mot de passe</label>
@@ -58,7 +57,7 @@ session_start();
 <?php
 if(isset($_POST["send"])){
     $user->connexion($_POST["login"],$_POST["password"]);
-    
+
 }
 
 ?>

@@ -29,6 +29,7 @@ if (isset($_GET['id']))
 <head>
 	<title>Articles</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
 
 </head>
 

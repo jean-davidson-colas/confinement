@@ -1,4 +1,5 @@
-<?php 
+
+<?php
 require 'class/bdd.php';
 require 'class/user.php';
 
@@ -22,10 +23,10 @@ if($_SESSION['id_droits'] != 1337 || $_SESSION['login'] != "admin"){
 <html>
 
 <head>
-        <title>Administration-Okage</title> 
+        <title>Administration-Okage</title>
         <link rel="stylesheet" href="css/style.css">
-        <link href="https://fonts.googleapis.com/css?family=Leckerli+One&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
+      
 </head>
 
 <body class ="admin">
@@ -41,7 +42,7 @@ if($_SESSION['id_droits'] != 1337 || $_SESSION['login'] != "admin"){
 <main>
 <section>
     <h1> Espace Okage </h1>
-            
+
 </section>
 
 
@@ -66,16 +67,16 @@ $_SESSION['bdd']->close();
         <th>Email</th>
         <th>Grade</th>
         <th>Supprimer??</th>
-        
+
     </tr>
 </thead>
 </table>
 <?php
 
 
-foreach($uti as $utili) 
-{ 
-     
+foreach($uti as $utili)
+{
+
 ?>
 
 
@@ -102,7 +103,7 @@ if(isset($_POST['resat']))
 {
     $_SESSION['bdd']->delete();
     header('Location:admin.php');
-    
+
 }
 
 }
@@ -123,15 +124,15 @@ $_SESSION['bdd']->close();
         <th>Rapports</th>
         <th>Date</th>
         <th>Supprimer??</th>
-        
+
     </tr>
 </thead>
 
 </table>
 <?php
-foreach($art as $art3) 
-{ 
-     
+foreach($art as $art3)
+{
+
 ?>
 <table class= "adb">
 <tbody >
@@ -141,7 +142,7 @@ foreach($art as $art3)
     <td><?php echo $art3[3] ; ?> </td>
     <td><?php echo $art3[1] ; ?> </td>
     <td><?php echo $art3[4] ; ?> </td>
-   
+
     <td>
     <form method="post" action="admin.php" id="suppr">
     <button type="submit" id="submit" name="art" value ="<?php echo $art3[2];?>">Supprimer</button>
@@ -149,7 +150,7 @@ foreach($art as $art3)
     </td>
     </tr>
 </tbodY>
-  </table></br></br> 
+  </table></br></br>
   <?php
 
 //*suppression des articles
@@ -157,7 +158,7 @@ if(isset($_POST['art']))
  {
     $_SESSION['bdd']->SupprArticle();
     header('Location:admin.php');
-    
+
  }
 }
 $_SESSION['bdd']->connect();
@@ -168,23 +169,23 @@ $_SESSION['bdd']->close();
 <h2>Gestion _Commentaires</h2>
 <table>
 <thead>
-    <tr> 
-                                    				
+    <tr>
+
         <th>Id</th>
         <th>Id_Rapport</th>
         <th>Rang_utilisateur</th>
         <th>Missive</th>
         <th>Date</th>
         <th>Supprimer??</th>
-        
+
     </tr>
 </thead>
 
 </table>
 <?php
-foreach($com as $com3) 
-{ 
-     
+foreach($com as $com3)
+{
+
 ?>
 <table>
 <tbody>
@@ -194,7 +195,7 @@ foreach($com as $com3)
     <td><?php echo $com3[3] ; ?> </td>
     <td><?php echo $com3[1] ; ?> </td>
     <td><?php echo $com3[4] ; ?> </td>
-    
+
     <td>
     <form method="post" action="admin.php" id="supprC">
     <button type="submit" id="submit" name="com" value ="<?php echo $com3[3];?>">Supprimer</button>
@@ -202,17 +203,17 @@ foreach($com as $com3)
     </td>
     </tr>
 </tbody>
-  </table>  
+  </table>
   <?php
 //*suppression des commentaires(thnks marceau)
 if(isset($_POST['com']))
  {
     $_SESSION['bdd']->SupprCom();
     header('Location:admin.php');
-    
+
  }
 }
-    
+
 ?>
 
 </main>
