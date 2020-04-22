@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 21 avr. 2020 à 19:23
+-- Généré le :  ven. 10 avr. 2020 à 18:09
 -- Version du serveur :  10.4.10-MariaDB
 -- Version de PHP :  7.3.12
 
@@ -38,24 +38,27 @@ CREATE TABLE IF NOT EXISTS `articles` (
   `id_categorie` int(11) NOT NULL,
   `date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=41 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `articles`
 --
 
 INSERT INTO `articles` (`id`, `article`, `id_utilisateur`, `id_categorie`, `date`) VALUES
+(20, 'reztyruiyoup', 1345, 1, '2020-04-08 18:45:48'),
 (2, 'tyriytr', 1337, 1, '2020-03-22 13:10:29'),
 (3, 'tiriury', 1337, 1, '2020-03-22 13:10:31'),
-(32, 'On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions\r\n', 1337, 1, '2020-04-11 02:53:05'),
-(33, 'On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions', 1337, 3, '2020-04-11 02:53:10'),
-(34, 'On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions', 1337, 5, '2020-04-11 02:53:16'),
-(35, 'tluiuktjyrsdukfi', 1337, 1, '2020-04-11 04:08:16'),
-(36, 'oiuytyrterze', 1345, 1, '2020-04-11 04:09:09'),
-(37, 'zertyui', 1345, 1, '2020-04-11 04:10:26'),
-(38, 'Si vous voulez utiliser un passage du Lorem Ipsum, vous devez Ãªtre s', 1345, 1, '2020-04-11 04:10:39'),
-(39, 'qsdfghjklmmm', 1345, 1, '2020-04-11 04:11:47'),
-(40, 'azertyui', 1345, 1, '2020-04-11 04:11:54');
+(19, 'fretyuiryou', 1345, 1, '2020-04-08 18:45:46'),
+(17, 'ezrtyiuopÃ´', 1345, 1, '2020-04-08 18:45:41'),
+(18, 'rzetryiuopuoi^ml', 1345, 1, '2020-04-08 18:45:44'),
+(21, 'dfs<gsuih', 1345, 1, '2020-04-08 18:45:51'),
+(22, 'fTRUI', 1345, 1, '2020-04-08 18:45:52'),
+(23, 'ertyiuop', 1345, 1, '2020-04-10 15:48:26'),
+(24, 'Le Lorem Ipsum est simplement du faux texte employÃ© dans la composition et la mise en page avant impression. Le Lorem Ipsum', 1347, 1, '2020-04-10 17:33:02'),
+(25, 'Le Lorem Ipsum est simplement du faux texte employÃ© dans la composition et la mise en page avant impression. Le Lorem Ipsum e', 1347, 1, '2020-04-10 17:37:00'),
+(26, 'Le Lorem Ipsum est simplement du faux texte employÃ© dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux', 1347, 1, '2020-04-10 17:37:36'),
+(27, 'Le Lorem Ipsum est simplement du faux texte employÃ© dans la composition et la mise en page avant impression. Le Lorem Ipsum est le', 1347, 2, '2020-04-10 17:37:47'),
+(28, 'Le Lorem Ipsum est simplement du faux texte employÃ© dans la composition et la mise en page avant impression. Le Lorem Ipsum e\r\n', 1347, 3, '2020-04-10 17:38:04');
 
 -- --------------------------------------------------------
 
@@ -95,7 +98,7 @@ CREATE TABLE IF NOT EXISTS `commentaires` (
   `id_utilisateur` int(11) NOT NULL,
   `date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `commentaires`
@@ -104,12 +107,11 @@ CREATE TABLE IF NOT EXISTS `commentaires` (
 INSERT INTO `commentaires` (`id`, `commentaire`, `id_article`, `id_utilisateur`, `date`) VALUES
 (12, 'EDRSETRYTUYI', 0, 1344, '2020-04-08 18:28:25'),
 (11, 'YRUIYOYUTYTRE', 9, 1344, '2020-04-08 18:28:25'),
-(22, 'uyiotytri', 35, 1337, '2020-04-11 02:08:25'),
-(23, 'iutyuyouyti', 35, 1337, '2020-04-11 02:08:28'),
-(24, '_Ã¨Ã§o_(Ã¨-', 35, 1345, '2020-04-11 02:10:56'),
-(25, 'iktyerse', 35, 1345, '2020-04-11 02:11:03'),
-(26, 'ikyujtr', 35, 1345, '2020-04-11 02:11:08'),
-(27, 'RETYUIKLO', 39, 1337, '2020-04-11 03:10:20');
+(13, 'rzteyrtuiuo', 19, 1345, '2020-04-10 13:49:03'),
+(14, 'zertyiuopo^Ã ^Ã§)=', 19, 1345, '2020-04-10 13:49:14'),
+(15, 'ezartyiuopÃ´', 19, 1345, '2020-04-10 13:49:25'),
+(16, '', 19, 1345, '2020-04-10 13:50:47'),
+(17, 'azertyui', 18, 1345, '2020-04-10 13:51:29');
 
 -- --------------------------------------------------------
 
@@ -147,7 +149,7 @@ CREATE TABLE IF NOT EXISTS `utilisateurs` (
   `email` varchar(255) NOT NULL,
   `id_droits` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=1350 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=1348 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `utilisateurs`
@@ -158,7 +160,8 @@ INSERT INTO `utilisateurs` (`id`, `login`, `password`, `email`, `id_droits`) VAL
 (1339, 'azerty', '$2y$12$hNE8NUf9QgXJmACe8Rb3sekKVu146ffG1NmjqSvQqAGcpFAbvjUCu', 'jdcolas8188@gmail.com', 1),
 (1345, 'dre', '$2y$12$03Bht3qkaO8jC7THF7YQi./AWKclM6aOIJ5/6UZrEsAvsp2LuArWG', 'jdcolas8a88@gmail.com', 42),
 (1344, 't', '$2y$12$ot.NYmS17TnswWN/J/orMeIiu3SWYkMwVFE80KHrYVTRguqFn9qJO', 'jdcolas8e88@gmail.com', 1),
-(1346, 'PO123', '$2y$12$kS79k1W264np1gssjoIaGeZvBD7rIvalepUq5eTNsO4PM5RC55wtK', 'jdcolas8s88@gmail.com', 1);
+(1346, 'PO123', '$2y$12$kS79k1W264np1gssjoIaGeZvBD7rIvalepUq5eTNsO4PM5RC55wtK', 'jdcolas8s88@gmail.com', 1),
+(1347, 'sassou', '$2y$12$vEwwnorQ6uXH0nUrJwgnU.mF.sUbFUsDcKnkMx6qZbtYH90VFsfAO', 'sassiya.kouachi@yahoo.fr', 1);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
