@@ -8,7 +8,7 @@ session_start();
 
 $connexion = mysqli_connect("localhost", "root", "", "confinement");
 
-if (isset($_GET['id']))
+if (isset($_GET['id'])) 
 {
 	$requeteArticle = "SELECT * FROM articles WHERE id = '".$_GET['id']."'";
 	$queryArticle = mysqli_query($connexion, $requeteArticle);
@@ -18,7 +18,7 @@ if (isset($_GET['id']))
 	$queryUser = mysqli_query($connexion, $requeteUser) ;
 	$resultUser = mysqli_fetch_all($queryUser);
 
-
+	
 }
 
 
@@ -27,10 +27,9 @@ if (isset($_GET['id']))
 ?>
 
 <head>
-	<title>Articles</title>
+	<title>Articles</title> 
 	<link rel="stylesheet" href="css/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
-
+	
 </head>
 
 <div class="banniere">
@@ -51,9 +50,9 @@ if (isset($_GET['id']))
 	<main id="mainArticle">
 		<?php
 
-		if (isset($_SESSION['login']))
+		if (isset($_SESSION['login'])) 
 		{?>
-
+			
 			<div id="infoArticle">
 				Titre :
 				<?php
@@ -62,7 +61,7 @@ if (isset($_GET['id']))
 				Créer par : <?php ?>
 			</div>
 
-			<div>
+			<div id="anciens-commentaires">
 				<?php
 
 				$requeteCommentaire = "SELECT * FROM commentaires WHERE id_article='".$_GET['id']."'";
@@ -72,17 +71,17 @@ if (isset($_GET['id']))
 				$nbCommentaire = count($resultCommentaire);
 
 				//echo $requeteCommentaire;
-
+				
 				//var_dump($resultCommentaire);
 
-				if (empty($resultCommentaire))
+				if (empty($resultCommentaire)) 
 				{
 					echo "PAS DE COMMENTAIRE";
 				}
 				else
 				{
-					for ($i=0; $i < $nbCommentaire ; $i++)
-					{
+					for ($i=0; $i < $nbCommentaire ; $i++) 
+					{ 
 
 						echo $resultCommentaire[$i][1];
 						echo "<br />";
@@ -95,7 +94,7 @@ if (isset($_GET['id']))
 				?>
 			</div>
 
-			<div>
+			<div id="commentaire">
 				<form action="articles.php?id=<?php echo $resultArticle[0][0]?>" method="post">
 
 					<textarea rows="10" cols="43"name="commentaire" placeholder="Votre Message"></textarea>
@@ -106,7 +105,7 @@ if (isset($_GET['id']))
 
 				<?php
 
-				if (isset($_POST['envoyer']))
+				if (isset($_POST['envoyer'])) 
 				{
 					$date = date("Y-m-d H:i:s");
 

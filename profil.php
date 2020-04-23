@@ -1,4 +1,4 @@
-<?php
+<?php 
 require 'class/bdd.php';
 require 'class/user.php';
 
@@ -22,10 +22,9 @@ header('Location:index.php');
 <html>
 
 <head>
-        <title>Profil</title>
+        <title>Profil</title> 
         <link rel="stylesheet" href="css/style.css">
-        <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
-
+        
 </head>
 
 <body class = "profil">
@@ -43,18 +42,18 @@ header('Location:index.php');
     <h1> Mon compte </h1>
 
     <h1>Bienvenue <?php echo $_SESSION['login'];?></h1>
-
+    
             <form action="profil.php" class="formulaire" method="post">
 
                 <?php
-                if (!empty($resultatInfosProfil['avatar']))
+                if (!empty($resultatInfosProfil['avatar'])) 
                 { ?>
                     <img src="avatar/<?php echo $resultatInfosProfil['avatar'] ?>" width="200" ><br><br>
                 <?php
                 }?>
+                
 
-
-
+                
 
                     <label>Login</label>
                     <input type="text" name="login" required><br>
@@ -64,10 +63,10 @@ header('Location:index.php');
                     <input type="password" name="password" minlength="12"required ><br>
                     <label>Password confirm</label>
                     <input type="password" name="passwordconf" minlength="12" required><br>
-
+                
                     <input type="submit" name="envoyer">
                 <?php
-
+                
                 if($_SESSION['id_droits'] == 1337)
                 { ?>
                     <label> Rôle du membre : </label><br>
@@ -79,9 +78,9 @@ header('Location:index.php');
                     </select>
                     <br><input type="submit" value="Modifier le rôle" name="modifierrole" />
                         <?php } ?>
-                </form>
-
-
+                </form> 
+            
+ 
         </section>
 
 <?php
@@ -105,19 +104,19 @@ if(isset($_POST["envoyer"])){
 }
 
 
-if (isset($_FILES['avatar']) AND !empty($_FILES['avatar']))
+if (isset($_FILES['avatar']) AND !empty($_FILES['avatar'])) 
 {
     $tailleMax = 2097152 ;
     $extensionsValides = $arrayName = array('jpg', 'jpeg', 'gif', 'png');
-    if ($_FILES['avatar']['size'] <= $tailleMax)
+    if ($_FILES['avatar']['size'] <= $tailleMax) 
     {
         $extensionsUpload = strtolower(substr(strrchr($_FILES['avatar']['name'], '.'), 1));
-        if (in_array($extensionsUpload, $extensionsValides))
+        if (in_array($extensionsUpload, $extensionsValides)) 
         {
             $chemin = "avatar/".$resultatInfosProfil['login'].".".$extensionsUpload;
             echo $chemin;
             $deplacement = move_uploaded_file($_FILES['avatar']['tmp_name'], $chemin);
-            if ($deplacement)
+            if ($deplacement) 
             {
                 $updateAvatar = "UPDATE utilisateurs SET avatar = '".$resultatInfosProfil['login'].".".$extensionsUpload."' WHERE id = ".$resultatInfosProfil['id']."";
                 $queryAvatar = mysqli_query($connexion,$updateAvatar);
@@ -142,19 +141,19 @@ if (isset($_FILES['avatar']) AND !empty($_FILES['avatar']))
 ?>
 </br>
 <section><p></p>
-<iframe width=80% height="615" src="https://www.youtube.com/embed/FOfWwN8lp9s"
+<iframe width=80% height="615" src="https://www.youtube.com/embed/FOfWwN8lp9s" 
 		frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </section>
 <section width=100% >
 <p>Contrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire.
-Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C.,
+Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C., 
 le rendant vieux de 2000 ans. Un professeur du Hampden-Sydney College, en Virginie, s'est intéress
 à un des mots latins les plus
 Contrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire.
-Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C.,
+Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C., 
 le rendant vieux de 2000 ans. Un professeur du Hampden-Sydney College, en Virginie, s'est intéress
 à un des mots latins les plusContrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire.
-Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C.,
+Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C., 
 le rendant vieux de 2000 ans. Un professeur du Hampden-Sydney College, en Virginie, s'est intéress
 à un des mots latins les plus</p>
 </section>

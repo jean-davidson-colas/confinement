@@ -17,10 +17,9 @@ $user = new user();
 
 
 <head>
-        <title>Inscription</title>
+        <title>Inscription</title> 
         <link rel="stylesheet" href="css/style.css">
-        <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
-
+        
 </head>
 
 <body class="ins">
@@ -36,7 +35,7 @@ $user = new user();
 
     <section>
                  <h1>Inscription</h1>
-
+    
         <form class="formulaire" action="inscription.php" method="post">
 
             <label>Identifiant</label>
@@ -47,7 +46,7 @@ $user = new user();
             <input type="password" name="password" minlength="5" required><br>
             <label>Confirmation du mot de passe</label>
             <input type="password" name="passwordconf" minlength="5" required><br>
-
+           
             <input type="submit" name="envoyer">
         </form>
 
