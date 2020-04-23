@@ -1,34 +1,25 @@
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
-</style>
 
-@font-face
-{
-    font-family: "Ma_Super_Fonte";
-    src: url("../polices/njnaruto") format('truetype');
-    
-}
-@font-face
-{
-    font-family: "Ma_Super_Fonte2";
-    src: url("../polices/Manga bold") format('OpenType');
-    
+/* POLICES
+font-family: 'Montserrat', sans-serif;
+font-family: 'Libre Baskerville', serif; */
+
+title,h1,h2{
+    font-family: 'Libre Baskerville', serif;
 }
 
-  
-
+p,label{
+    font-family: 'Montserrat', sans-serif;
+}
 
 html
 {
-    margin:0;
+    margin: 0;
     padding: 0;
 }
 
 body
 {   background: rgb(7,3,2);
-    background: linear-gradient(56deg, rgb(41, 44, 185) 0%, rgba(28, 41, 156, 0.972) 99%);
-    color: rgb(228, 88, 23);
-    color: rgb(6, 6, 56);
+    background: white;
     margin:0;
     padding:0;
     width: 100%;
@@ -36,16 +27,68 @@ body
 }
 main
 {
-    width: 100%;
-    height: 100%;
+    /* width: 100%;
+    height: 100%; */
 }
+
+#full{
+    display: flex;
+    width: 100%;
+    margin-top: 5%;
+}
+
+#r-h1-index{
+    font-size: 5em;
+    text-decoration: underline;
+}
+
+#r-middle-txt-index{
+    width: 75%;
+    margin-top: 4%;
+    margin-left: 12.5%;
+    border-style: solid;
+    border-radius: 25px;
+    border-color: black;
+    box-shadow: black 0 0 30px;
+    background-image: radial-gradient(white,rgba(41, 181, 172, 0.76));
+}
+
+#r-h2-index{
+    width: 100%;
+    font-size: 3em;
+}
+
+#r-hr-index{
+    width: 50%;
+    padding-left: 10%;
+    height: 5px;
+    margin-top: 5%;
+    background-color: black;
+    border-radius: 100px;
+}
+
+#r-p-index{
+    width: 80%;
+    margin-top: 2%;
+    font-size: 1.5em;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 3%;
+}
+
+.acc iframe{
+    border-radius: 50px;
+    border-style: outset;
+    border-color: black;
+    border-width: 5px;
+    box-shadow: grey 0 0 50px;
+}
+
 .acc
 {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 200px;
+    width: 50%;
+    height: 100%;
+    margin-left: 5%;
 }
 .acc ul
 {
@@ -71,8 +114,8 @@ main
 
 .admin
 {
-    font-family: "Ma_Super_Fonte";
-    background-image: url(../img/test.png);
+    
+    background-color: white;
     position: absolute;
     background-size: cover;
     width: 100%;
@@ -83,8 +126,7 @@ main
 }
 .profil
 {
-    font-family: "Ma_Super_Fonte";
-    background-image: url(../img/haku.jpg);
+    
     position: absolute;
     background-size: cover;
     color: rgb(6, 6, 56);
@@ -96,8 +138,7 @@ main
 }
 .modo
 {
-    font-family: "Ma_Super_Fonte";
-    background-image: url(../img/zabuza.jpg);
+    
     position: absolute;
     background-size: cover;
     color: rgb(6, 6, 56);
@@ -109,8 +150,7 @@ main
 }
 .ins
 {
-    font-family: "Ma_Super_Fonte";
-    background-image: url(../img/jiraiya-4.jpg);
+    background-color: white;
     position: absolute;
     background-size: cover;
     background-attachment: scroll;
@@ -124,7 +164,6 @@ main
 
 h1
 {
-    font-family: "Ma_Super_Fonte",cursive;
     display: flex;
     font-size: 40px;
     justify-content: center;
@@ -133,7 +172,6 @@ h1
 
 h2
 {
-    font-family: "Ma_Super_Fonte",cursive;
     display: flex;
     font-size: 25px;
     justify-content: center;
@@ -145,7 +183,10 @@ button a
     text-decoration: none;
 }
 
-button{font-size: 20px;}
+button
+{
+    font-size: 20px;
+}
 
 a{
     color:black;
@@ -155,41 +196,23 @@ a{
 input[type="submit"]
 {
     cursor:pointer;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Bold";
+	
 	padding-bottom: 4px;
 	margin-top: 30px;
-	box-shadow: 0px 1px 10px lightgray;
-	background-color:#019891;
+	box-shadow: 0px 1px 10px grey;
+	background-color:rgb(228, 88, 23);
 	text-decoration: none;
 	width: 120px;
-	height: 40px;
+	height: 30px;
 	text-align:center;
 	transition: all 0.2s ease;
 	color: white;
 	border-radius: 20px;
-	font-size: 15px;
-    opacity: 0.6;
-    transition: 0.3s;
-    outline:none;
-}
-
-input[type="submit"]:hover {opacity: 1}
-
-input[type="submit"]:active {
-  background-color: #29B5AC ;
-  transform: translateY(4px);
+	font-size: 10px;
 }
 
 
-select[type="post"]{
-    font-family: 'Montserrat', sans-serif;
-    outline:none;
-    border-radius:5px;
-    border:0.5px solid lightgray;
-    padding:1%;   
-}
-
-select[type="post"]:hover{background-color:lightgray;}
 
 header
 {
@@ -251,11 +274,10 @@ footer
     background-size: cover;
     width: 100%;
     height: 10vh;
+    margin-top: 2%;
     align-content: center;
     align-items:center;
     justify-content: center;
-    position:absolute;
-    bottom:-1130px;
 }
 
 audio{
@@ -275,7 +297,12 @@ audio{
     max-width:25vw;
     margin: auto;
     padding:15px;
-    background-color: rgba(66, 51, 41, 0.829);
+    padding-bottom: 3%;
+    margin-top: 7%;
+    background-image: radial-gradient(white,rgba(41, 181, 172, 0.76));
+    border-radius: 25px;
+    border-color: black;
+    box-shadow: rgb(107, 107, 107) 0 0 50px;
 }
 
 
@@ -289,6 +316,7 @@ audio{
     max-width: 20vw;
     font-size: 15px;
     text-shadow: 4px 4px 12px rgba(221, 221, 215, 0.795);
+    padding-top: 2%;
 }
 
 .formulaire input
@@ -300,10 +328,25 @@ audio{
     justify-items:center;
     font-size: 15px;
     max-width: 20vw;
-
+    margin-top: 2%;
+    padding-top: 1%;
     color: rgb(22, 22, 22);
+    background-color: rgb(224, 223, 223);
     text-shadow: 4px 4px 12px rgba(253, 255, 147, 0.795);
 }
+
+#r-h1-inscri{
+    font-size: 3em;
+    text-decoration: underline;
+    margin-top: 5%;
+}
+
+#r-h1-connexion{
+    margin-top: 5%;
+    font-size: 3em;
+    text-decoration: underline;
+}
+
 table{
     width: 100%;
     
@@ -319,15 +362,10 @@ table{
 .adb
 {
     width: 100%;
-    
-    
-    
 }
 .adb td
 {
     width: 18%;
-    
-    
 }
 thead{
     display: flex;
@@ -361,6 +399,7 @@ td{
 /*--------------------INDEX--------------------*/
 /*--------------------INDEX--------------------*/
 
+
 .banniere{
     text-align: center;
     background-image: url(../img/banniere.jpg);
@@ -371,10 +410,12 @@ td{
 }
 
 .logo{
+  display: flex;
+  justify-content: center;
     width: 20%;
     margin: 0 auto;
     background-color: rgb(255, 255, 255, 0.5);
-   
+
 }
 
 /*--------------------Creer Article--------------------*/
@@ -387,62 +428,21 @@ td{
     margin: 0 auto;
     display: block;
     text-align: center;
-    border: 0.4px solid lightgray;
-    border-radius:5px;
-    box-shadow:3px 3px 3px lightgray;
-    height:400px;
-    width: 80%;
+    border-style: dashed solid ;
+    border-width: 3px;
+    width: 50%;
     margin-top: 3%;
     margin-bottom: 3%;
-    background-color:white;
-    color:lightgray;
-    padding:5%;
-    font-family: 'Montserrat', sans-serif;
-    font-size:15px;
-    text-align:center;
+
+   
 }
 
 #creerArticle textarea{
-    margin-top:5%;
     resize: none;
-    border:0.4px solid #019891;
-    border-radius:5px;
-    width:80%;
-    height:250px;
-    opacity:0.5;
-    outline:none;
-    font-family: 'Montserrat', sans-serif;
-    padding:2%;
 }
 
-#creerArticle textarea:hover{background-color:#F1FFFC;}
 
-#button-valider
-{
-    cursor:pointer;
-    font-family: 'Montserrat', sans-serif;
-	padding-bottom: 4px;
-	margin-top: 30px;
-	box-shadow: 0px 1px 10px lightgray;
-	background-color:#019891;
-	text-decoration: none;
-	width: 120px;
-	height: 40px;
-	text-align:center;
-	transition: all 0.2s ease;
-	color: white;
-	border-radius: 20px;
-	font-size: 15px;
-    opacity: 0.6;
-    transition: 0.3s;
-    outline:none;
-}
 
-#button-valider:hover {opacity: 1}
-#button-valider:active {
-  background-color: #29B5AC ;
-  transform: translateY(4px);
-}
 
 /*--------------------Creer Categorie--------------------*/
 /*--------------------Creer Categorie--------------------*/
@@ -460,22 +460,64 @@ td{
     border-style: dashed solid;
 }
 
-#bodycreer-article{background:white}
 
 
 
+
 /*--------------------allArticle--------------------*/
 /*--------------------allArticle--------------------*/
 /*--------------------allArticle--------------------*/
 /*--------------------allArticle--------------------*/
 /*--------------------allArticle--------------------*/
-/*
+
 #bodyAllArticle{
     background-image: url(../img/backgroundAllArticle.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
-*/
+
+#allArticle{
+    margin: 0 auto;
+    width: 50%;
+    padding: 2%;
+    background-color: white;
+    
+}
+
+.articles{
+    text-align: center;
+    border-style: dashed solid;
+    border-width: 4px;
+    margin: 2%;
+    padding: 2%;
+}
+
+/*--------------------ARTICLE--------------------*/
+/*--------------------ARTICLE--------------------*/
+/*--------------------ARTICLE--------------------*/
+/*--------------------ARTICLE--------------------*/
+/*--------------------ARTICLE--------------------*/
+
+#mainArticle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto ;
+}
+
+#mainArticle div form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto ;
+}
+
+#infoArticle{
+    margin: auto;
+    text-align: center;
+}
 
 #bodyAllArticle{background:white;margin:0;}
 
