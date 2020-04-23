@@ -659,7 +659,7 @@ header nav
   display: block;
   position: relative;
   top: 40px;
-  left:-160px; 
+  left:-10px; 
   z-index: 1;
   -webkit-user-select: none;
   user-select: none;
