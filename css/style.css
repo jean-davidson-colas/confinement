@@ -551,6 +551,7 @@ td{
     border-radius: 50px;
     background-color:#F1FFFC;
     border-color:#019891;
+    height: auto;
 }
 
 #commentaire textarea{
