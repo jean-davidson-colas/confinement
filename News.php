@@ -33,18 +33,18 @@ session_start();
 <main>
 	<h1 id="r-h1-index">Bienvenue sur les News de Cov-vivre</h1>
 
-	<div id="full">
+	<div id="full1">
 	
-		<section class="acc">
-		<iframe width=90% height="500" src="https://www.youtube.com/embed/KZER634wMGI"
+		<section class="acc1">
+		<iframe width=100% height="700" src="https://www.youtube.com/embed/KZER634wMGI"
 		frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			
 		</section>
+		</br></br></br>
+		<section class="acc1">
 
-		<section class="acc">
-
-		<iframe width=90% height="500" src="https://www.youtube.com/embed/8W9Z-YofzsY"
-		frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<iframe width=100% height="700" src="https://www.youtube.com/embed/qq1nzCYl788" 
+			frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</section>
 	</div>
 
