@@ -34,7 +34,7 @@ $user = new user();
     <main>
 
     <section>
-                 <h1 id="r-h1-inscri">Inscription</h1>
+                 <h1>Inscription</h1>
     
         <form class="formulaire" action="inscription.php" method="post">
 
