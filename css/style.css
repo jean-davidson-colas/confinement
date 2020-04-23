@@ -399,6 +399,7 @@ td{
 /*--------------------INDEX--------------------*/
 /*--------------------INDEX--------------------*/
 
+
 .banniere{
     text-align: center;
     background-image: url(../img/banniere.jpg);
@@ -409,10 +410,12 @@ td{
 }
 
 .logo{
+  display: flex;
+  justify-content: center;
     width: 20%;
     margin: 0 auto;
     background-color: rgb(255, 255, 255, 0.5);
-   
+
 }
 
 /*--------------------Creer Article--------------------*/
