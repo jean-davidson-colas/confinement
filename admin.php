@@ -22,7 +22,7 @@ if($_SESSION['id_droits'] != 1337 || $_SESSION['login'] != "admin"){
 <html>
 
 <head>
-        <title>Administration-Okage</title> 
+        <title>Administration</title> 
         <link rel="stylesheet" href="css/style.css">
         <link href="https://fonts.googleapis.com/css?family=Leckerli+One&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
@@ -40,7 +40,7 @@ if($_SESSION['id_droits'] != 1337 || $_SESSION['login'] != "admin"){
 
 <main>
 <section>
-    <h1> Espace Okage </h1>
+    <h1> Espace Administrateur</h1>
             
 </section>
 
@@ -61,10 +61,10 @@ $_SESSION['bdd']->close();
 <table>
 <thead>
     <tr>
-        <th>Rang</th>
+        <th>ID</th>
         <th>Pseudo</th>
         <th>Email</th>
-        <th>Grade</th>
+        <th>Role</th>
         <th>Supprimer??</th>
         
     </tr>
@@ -117,10 +117,10 @@ $_SESSION['bdd']->close();
 <table class= "ad">
 <thead>
     <tr>
-        <th>Id.Rapport</th>
+        <th>Id.article</th>
         <th>Rang_utilisateur</th>
-        <th>Village</th>
-        <th>Rapports</th>
+        <th>Categorie</th>
+        <th>Articles</th>
         <th>Date</th>
         <th>Supprimer??</th>
         
@@ -171,9 +171,9 @@ $_SESSION['bdd']->close();
     <tr> 
                                     				
         <th>Id</th>
-        <th>Id_Rapport</th>
+        <th>Id_Commentaire</th>
         <th>Rang_utilisateur</th>
-        <th>Missive</th>
+        <th>Commentaire</th>
         <th>Date</th>
         <th>Supprimer??</th>
         
@@ -217,9 +217,10 @@ if(isset($_POST['com']))
 
 </main>
 
-<?php require 'footer.php'?>
+
 
 
 </body>
+<?php require 'footer.php'?>
 
 </html>

@@ -55,7 +55,7 @@
 	
 </head>
 
-<body>
+<body id="bodycreer-article">
 <div class="banniere">
 		<div class="logo">
 			<img src="img/logo.png">
@@ -93,7 +93,7 @@
 							
 						</select><br />
 
-						<input type="submit" name="addArticle" value="Valider">
+						<input id="button-valider" type="submit" name="addArticle" value="Valider">
 
 					</form>
 					

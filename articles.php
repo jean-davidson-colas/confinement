@@ -6,7 +6,7 @@ require 'class/user.php';
 
 session_start();
 
-$connexion = mysqli_connect("localhost", "root", "", "blog");
+$connexion = mysqli_connect("localhost", "root", "", "confinement");
 
 if (isset($_GET['id'])) 
 {
@@ -61,7 +61,7 @@ if (isset($_GET['id']))
 				Créer par : <?php ?>
 			</div>
 
-			<div>
+			<div id="anciens-commentaires">
 				<?php
 
 				$requeteCommentaire = "SELECT * FROM commentaires WHERE id_article='".$_GET['id']."'";
@@ -94,7 +94,7 @@ if (isset($_GET['id']))
 				?>
 			</div>
 
-			<div>
+			<div id="commentaire">
 				<form action="articles.php?id=<?php echo $resultArticle[0][0]?>" method="post">
 
 					<textarea rows="10" cols="43"name="commentaire" placeholder="Votre Message"></textarea>
