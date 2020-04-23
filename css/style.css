@@ -68,7 +68,7 @@ main
 .admin
 {
     font-family: "Ma_Super_Fonte";
-    background-image: url(../img/test.png);
+    
     position: absolute;
     background-size: cover;
     width: 100%;
@@ -80,7 +80,7 @@ main
 .profil
 {
     font-family: "Ma_Super_Fonte";
-    background-image: url(../img/haku.jpg);
+    
     position: absolute;
     background-size: cover;
     color: rgb(6, 6, 56);
@@ -227,6 +227,7 @@ header li a:hover
 footer
 {
     display: flex;
+    flex-direction: column;
     background-color: rgba(33,33,33,0.7);
     background-position: center;
     background-size: cover;

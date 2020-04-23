@@ -6,7 +6,7 @@ require 'class/user.php';
 
 session_start();
 
-$connexion = mysqli_connect("localhost", "root", "", "blog");
+$connexion = mysqli_connect("localhost", "root", "", "confinement");
 
 if (isset($_GET['id'])) 
 {
@@ -124,7 +124,7 @@ if (isset($_GET['id']))
 		}
 		else
 		{
-			echo "Vous devez etre connecter pour avoir accés a cette partit du blog";
+			echo "Vous devez etre connecter pour avoir accés a cette partit du confinement";
 		}
 		?>
 	</main>
