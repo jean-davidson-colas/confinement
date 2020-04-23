@@ -26,11 +26,31 @@ body
     height: 100%;
 }
 
+#main-responsive{
+    display: flex;
+    flex-direction:column;
+    margin:auto 0;
+}
 
 #full{
     display: flex;
+    flex-direction: row;
     width: 100%;
     margin-top: 5%;
+}
+
+@media (max-width:800px){
+  #full{
+    display:flex;
+      flex-direction:column;
+  }
+    .acc{
+        width:auto;
+        margin-top:2%;
+    }
+    
+    iframe{width:auto;}
+    
 }
 
 #News{

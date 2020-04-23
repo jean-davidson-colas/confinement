@@ -30,7 +30,7 @@ session_start();
 
 	<?php require 'header.php';?>
 
-<main>
+<main id="main-responsive">
 	<h1 id="r-h1-index">Bienvenue sur Cov-vivre</h1>
 
 	<div id="full">
