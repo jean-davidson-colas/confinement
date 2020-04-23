@@ -8,15 +8,19 @@ if (isset($_SESSION['login']))
     $login = $_SESSION['login'];
     $today = date("d.m.y")
 ?>
-
 <nav role="navigation">
+
 <div id="menu2">
+
 <input type="checkbox" />
    
    <span></span>
    <span></span>
    <span></span>
-    <ul id="menu">
+    
+   <ul id="menu">
+
+
         <?php 
         if($_SESSION['id_droits'] == 1337)
         {
@@ -65,12 +69,16 @@ if (isset($_SESSION['login']))
 else
  {
 ?>
+
 <nav role="navigation">
+
 <div id="menu2">
+
 <input type="checkbox" />
-<span></span>
-   <span></span>
-   <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    
     <ul id="menu">
             <li><a href="index.php"> Accueil</a></li>
             <li><a href="news.php"> News</a></li>
@@ -80,6 +88,7 @@ else
             
              
      </ul>
+ </div>
 </nav>
 
 <?php
