@@ -41,7 +41,7 @@ session_start();
 <main>
 
 <section class="connexion">
-                 <h1> Connexion </h1>
+                 <h1 id="r-h1-connexion"> Connexion </h1>
    
         <form class="formulaire" action="connexion.php" method="post">
         
