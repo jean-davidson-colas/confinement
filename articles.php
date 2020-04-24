@@ -32,11 +32,6 @@ if (isset($_GET['id']))
 	
 </head>
 
-<div class="banniere">
-		<div class="logo">
-			<img src="img/logo.png">
-		</div>
-	</div>
 
 <body id="bodyArticle">
 <div class="banniere">
