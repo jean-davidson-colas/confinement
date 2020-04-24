@@ -40,7 +40,7 @@ if($_SESSION['id_droits'] != 1337 || $_SESSION['login'] != "admin"){
 
 <main>
 <section>
-    <h1> Espace Administrateur</h1>
+    <h1>Espace Administrateur</h1>
             
 </section>
 
@@ -48,8 +48,7 @@ if($_SESSION['id_droits'] != 1337 || $_SESSION['login'] != "admin"){
 <?php
 $_SESSION['bdd']->connect();
 $uti=$_SESSION['bdd']->execute("SELECT * FROM utilisateurs");
-//var_dump($uti);
-//$resa=$_SESSION['bdd']->execute("SELECT reservations.debut,reservations.fin,reservations.id,utilisateurs.login  FROM reservations INNER JOIN utilisateurs ON reservations.id_utilisateur = utilisateurs.id");
+
 
 $_SESSION['bdd']->close();
 
@@ -204,7 +203,7 @@ foreach($com as $com3)
 </tbody>
   </table>  
   <?php
-//*suppression des commentaires(thnks marceau)
+//*suppression des commentaires
 if(isset($_POST['com']))
  {
     $_SESSION['bdd']->SupprCom();

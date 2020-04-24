@@ -38,7 +38,7 @@ if($_SESSION['id_droits'] != 42){
 
 <main>
 <section>
-    <h1> Espace Capitaine </h1>
+    <h1> Espace Modérateur</h1>
             
 </section>
 
@@ -63,7 +63,7 @@ $_SESSION['bdd']->close();
         <th>Rang</th>
         <th>Pseudo</th>
         <th>Email</th>
-        <th>Grade</th>
+        <th>Role</th>
         <th>Supprimer??</th>
         
     </tr>
@@ -116,9 +116,9 @@ $_SESSION['bdd']->close();
 <table class= "ad">
 <thead>
     <tr>
-        <th>Id.Rapport</th>
-        <th>Rang_utilisateur</th>
-        <th>Village</th>
+        <th>Id.Article</th>
+        <th>Id_utilisateur</th>
+        <th>Categorie</th>
         <th>Rapports</th>
         <th>Date</th>
         <th>Supprimer??</th>
@@ -174,7 +174,7 @@ $_SESSION['bdd']->close();
         <th>Id</th>
         <th>Id_Rapport</th>
         <th>Rang_utilisateur</th>
-        <th>Missive</th>
+        <th>Commentaire</th>
         <th>Date</th>
         <th>Supprimer??</th>
         
