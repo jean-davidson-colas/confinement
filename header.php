@@ -28,7 +28,7 @@ if (isset($_SESSION['login']))
             <li><a href="index.php">Accueil</a></li>
             <li><a href="News.php"> News</a></li>
             <li><a href="admin.php">Admin</a>
-            <li><a href="profil.php">profil</a>
+            <li><a href="profil.php">Profil</a>
             <li><a href="allArticle.php">Article</a>
             <li><a href="creer-article.php">Add Art.</a></li>
             <li><a href="creer-categories.php">Add Cat.</a></li>
@@ -39,8 +39,8 @@ if (isset($_SESSION['login']))
         {?>
             <li><a href="index.php">Accueil</a></li>
             <li><a href="News.php"> News</a></li>
-            <li><a href="modo.php">modérateur</a>
-            <li><a href="profil.php">profil</a>
+            <li><a href="modo.php">Modérateur</a>
+            <li><a href="profil.php">Profil</a>
             <li><a href="allArticle.php">Article</a>
             <li><a href="creer-article.php">Add Art.</a></li>
             <li><a href="creer-categories.php">Add Cat.</a></li>
